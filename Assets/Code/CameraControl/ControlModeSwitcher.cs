@@ -44,7 +44,7 @@ public class ControlModeSwitcher : MonoBehaviour {
 		}
 	}
 
-	void SetMode(ControlMode mode) {
+	public void SetMode(ControlMode mode) {
 		if (this.currentMode == mode) {
 			return;
 		}
