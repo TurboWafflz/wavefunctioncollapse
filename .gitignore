@@ -45,3 +45,4 @@ Screenshots/
 UserSettings
 *.debug
 *.so
+packages-lock.json

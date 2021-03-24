@@ -11,7 +11,7 @@ public class TakeScreenshot : MonoBehaviour {
     public int Counter;
 
     public string Filename = "Screenshots/Screenshot_{0}.jpg";
-    
+
     public bool CaptureOnClick = false;
 
     void Update() {
@@ -38,7 +38,7 @@ public class TakeScreenshot : MonoBehaviour {
         }
 		var filename = this.getFilename();
 		System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(filename));
-// 		ScreenCapture.CaptureScreenshot(filename);
+		ScreenCapture.CaptureScreenshot(filename);
         Debug.Log("Saved screenshot: " + filename);
         this.Counter++;
     }
