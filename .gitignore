@@ -41,3 +41,7 @@ sysinfo.txt
 Logs/
 
 Screenshots/
+/Build*
+UserSettings
+*.debug
+*.so
