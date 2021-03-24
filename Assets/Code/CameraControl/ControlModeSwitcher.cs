@@ -14,6 +14,7 @@ public class ControlModeSwitcher : MonoBehaviour {
 	public KeyCode[] ModeSwitchKeys;
 
 	private ControlMode currentMode;
+	public ControlMode PubControlMode;
 
 	void Start() {
 		Cursor.visible = false;
@@ -29,6 +30,7 @@ public class ControlModeSwitcher : MonoBehaviour {
 	}
 
 	void Update() {
+		PubControlMode = this.currentMode;
 		foreach (var mode in this.ControlModes) {
 			if (Input.GetKeyDown(mode.KeyCode)) {
 				this.SetMode(mode);
