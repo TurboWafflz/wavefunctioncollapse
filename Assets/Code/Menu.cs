@@ -49,4 +49,7 @@ public class Menu : MonoBehaviour
 			}
 		}
 	}
+	public void ChangeQuality(int value){
+		QualitySettings.SetQualityLevel(value, true);
+	}
 }
