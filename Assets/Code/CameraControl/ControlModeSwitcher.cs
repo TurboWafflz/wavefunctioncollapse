@@ -17,10 +17,10 @@ public class ControlModeSwitcher : MonoBehaviour {
 	public ControlMode PubControlMode;
 
 	void Start() {
-		Cursor.visible = false;
-		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = true;
+		Cursor.lockState = CursorLockMode.None;
 		if (this.ControlModes.Any()) {
-			this.SetMode(this.ControlModes[0]);
+			this.SetMode(this.ControlModes[3]);
 		}
 		foreach (var mode in this.ControlModes) {
 			if (mode != this.currentMode) {

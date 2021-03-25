@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
-	public bool shown = false;
+	private bool shown = false;
+	private bool intro = true;
 	private ControlModeSwitcher cm;
 	private ControlModeSwitcher.ControlMode OldMode;
 	public void Show(){
@@ -17,6 +18,10 @@ public class Menu : MonoBehaviour
 		cm.SetMode(null);
 	}
 	public void Hide(){
+		if (intro){
+			OldMode = cm.ControlModes[0];
+			intro = false;
+		}
 		shown = false;
 		Cursor.visible = false;
 		Cursor.lockState = CursorLockMode.Locked;
@@ -25,8 +30,8 @@ public class Menu : MonoBehaviour
 	}
 	void Start(){
 		cm = GameObject.Find("Player").GetComponent<ControlModeSwitcher>();
-		shown=false;
-		GameObject.Find("Menu").GetComponent<Canvas>().enabled = false;
+		shown=true;
+		GameObject.Find("Menu").GetComponent<Canvas>().enabled = true;
 	}
 	public void Exit(){
 		Application.Quit();
@@ -36,6 +41,10 @@ public class Menu : MonoBehaviour
 			if (!shown){
 				Show();
 			} else {
+				if (intro){
+					OldMode = cm.ControlModes[0];
+					intro = false;
+				}
 				Hide();
 			}
 		}
