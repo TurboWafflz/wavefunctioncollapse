@@ -454,7 +454,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 924bfbfa4310ee2f8b34167aaf48a2e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shown: 0
 --- !u!1 &589421190
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,6 +725,7 @@ GameObject:
   - component: {fileID: 784786032}
   - component: {fileID: 784786035}
   - component: {fileID: 784786036}
+  - component: {fileID: 784786038}
   - component: {fileID: 784786037}
   m_Layer: 0
   m_Name: Player
@@ -741,7 +741,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 784786031}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20ce72b0cd813c24dbf3e0953ce7d13a, type: 3}
   m_Name: 
@@ -834,10 +834,26 @@ MonoBehaviour:
     Behaviour: {fileID: 784786035}
   - KeyCode: 51
     Behaviour: {fileID: 784786036}
+  - KeyCode: 52
+    Behaviour: {fileID: 784786036}
   ModeSwitchKeys: 6d0000004d010000
   PubControlMode:
     KeyCode: 0
     Behaviour: {fileID: 0}
+--- !u!114 &784786038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784786031}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 719e6d6d312d4662e95f56989f1b9ab0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Velocity: 3
+  LookSensitivity: 200
 --- !u!1 &795396879
 GameObject:
   m_ObjectHideFlags: 0

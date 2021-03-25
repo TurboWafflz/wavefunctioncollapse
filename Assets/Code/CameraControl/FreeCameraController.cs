@@ -25,6 +25,11 @@ public class FreeCameraController : MonoBehaviour
 	}
 
 	void Update() {
+		if (GameObject.Find("Menu").GetComponent<Canvas>().enabled){
+			this.MouseSensitivity=0;
+		} else {
+			this.MouseSensitivity=3;
+		}
 		Vector3 movementVector = this.cameraTransform.forward * Input.GetAxis("Move Y")
 			+ this.cameraTransform.right * Input.GetAxis("Move X")
 			+ Vector3.up * (Input.GetAxis("Move Up/Down") + Input.GetAxisRaw("Jump"));
