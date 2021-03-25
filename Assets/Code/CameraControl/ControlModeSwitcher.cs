@@ -32,13 +32,13 @@ public class ControlModeSwitcher : MonoBehaviour {
 	void Update() {
 		PubControlMode = this.currentMode;
 		foreach (var mode in this.ControlModes) {
-			if (Input.GetKeyDown(mode.KeyCode)) {
+			if (Input.GetKeyDown(mode.KeyCode) && !GameObject.Find("Menu").GetComponent<Canvas>().enabled) {
 				this.SetMode(mode);
 			}
 		}
 		if (this.currentMode != null && this.ModeSwitchKeys != null) {
 			foreach (var keyCode in this.ModeSwitchKeys) {
-				if (Input.GetKeyDown(keyCode)) {
+				if (Input.GetKeyDown(keyCode) && !GameObject.Find("Menu").GetComponent<Canvas>().enabled) {
 					int currentIndex = Array.IndexOf(this.ControlModes, this.currentMode);
 					this.SetMode(this.ControlModes[(currentIndex + 1) % this.ControlModes.Length]);
 				}
