@@ -39,7 +39,7 @@ public class GenerateMapNearPlayer : MonoBehaviour {
 
 	public int ChunkSize = 4;
 
-	public float Range = 100;
+	public float Range = 50;
 
 	private Vector3 targetPosition;
 	private Vector3 mapPosition;
